@@ -3,7 +3,7 @@ import { Column, DataType, Id, Task } from "../types";
 import { SortableContext, useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import TaskCard from "./TaskCard";
-import { DeleteTwoTone, ReconciliationTwoTone } from "@ant-design/icons";
+import { DeleteTwoTone, PlusOutlined } from "@ant-design/icons";
 import { setLocalStorageData } from "../helpers/storage";
 
 interface Props {
@@ -119,10 +119,10 @@ function ColumnContainer(props: Props) {
           createTask(column.id);
           setLocalStorageData("selectedUserData", null);
         }}
-        className="flex items-center gap-2 border-t-2 border-textColor rounded-lg p-4 shadow-inner hover:bg-hoverColor hover:text-white active:bg-columnBgColor active:text-black"
+        className="flex items-center gap-2 rounded-lg p-2 m-2 hover:bg-hoverColor hover:text-white active:bg-columnBgColor active:text-black"
       >
-        <ReconciliationTwoTone className="text-2xl" />
-        Add Task
+        <PlusOutlined className="text-2xl"/>
+        <span>Add Task</span>
       </button>
     </div>
   );
