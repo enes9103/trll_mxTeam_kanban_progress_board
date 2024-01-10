@@ -67,8 +67,8 @@ KANBAN PROGRESS BOARD (folder)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -77,7 +77,8 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+
+- npm
   ```sh
   npm install npm@latest -g
   ```
@@ -89,19 +90,25 @@ This is an example of how to list things you need to use the software and how to
    git clone https://github.com/enes9103/trll_mxTeam_kanban_progress_board.git
    ```
 2. Install NPM packages
+
    ```sh
    npm install
    ```
 
+   ```sh
+   npm install --save-dev @types/react
+   ```
+
 3. The project is ready, you can start using it now.
-    You can run:
+   You can run:
 
-    `npm run dev`
+   `npm run dev`
 
-    Runs the app in the development mode.\
-    Open [http://localhost:5173/](http://localhost:5173) to view it in the browser.
+   Runs the app in the development mode.\
+   Open [http://localhost:5173/](http://localhost:5173) to view it in the browser.
 
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -116,6 +123,7 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
