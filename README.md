@@ -86,7 +86,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/enes9103/React_Typescript_Movie_App_Task.git
+   git clone https://github.com/enes9103/trll_mxTeam_kanban_progress_board.git
    ```
 2. Install NPM packages
    ```sh
