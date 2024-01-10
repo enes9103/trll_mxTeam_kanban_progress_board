@@ -72,7 +72,7 @@ function KanbanBoard() {
   function updateTask(
     id: Id,
     content: string,
-    personal: DataType | null | undefined
+    personal: DataType | null | undefined | string
   ) {
     const newTasks = tasks.map((task) => {
       if (task.id !== id) return task;

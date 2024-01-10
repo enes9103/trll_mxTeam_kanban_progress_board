@@ -9,7 +9,7 @@ export type Task = {
   id: Id;
   columnId: Id;
   content: string;
-  personal?: DataType | null;
+  personal?: DataType | null | string;
 };
 
 export interface DataType {

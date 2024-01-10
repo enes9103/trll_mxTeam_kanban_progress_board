@@ -11,7 +11,11 @@ interface Props {
   deleteColumn: (id: Id) => void;
   updateColumn: (id: Id, title: string) => void;
   createTask: (columnId: Id) => void;
-  updateTask: (id: Id, content: string, personal: DataType | null| undefined ) => void;
+  updateTask: (
+    id: Id,
+    content: string,
+    personal: DataType | null | undefined | string
+  ) => void;
   deleteTask: (id: Id) => void;
   tasks: Task[];
   handleSelectPerson: (item: DataType, task: Task) => void;
@@ -121,7 +125,7 @@ function ColumnContainer(props: Props) {
         }}
         className="flex items-center gap-2 rounded-lg p-2 m-2 hover:bg-hoverColor hover:text-white active:bg-columnBgColor active:text-black"
       >
-        <PlusOutlined className="text-2xl"/>
+        <PlusOutlined className="text-2xl" />
         <span>Add Task</span>
       </button>
     </div>

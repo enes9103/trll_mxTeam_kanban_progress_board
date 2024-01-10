@@ -133,8 +133,9 @@ function TaskCard({ task, deleteTask, updateTask, handleSelectPerson }: Props) {
           updateTask(
             task.id,
             e.target.value,
-            task?.personal?.name.first !== undefined
-              ? task?.personal?.name.first
+            typeof task?.personal === "object" &&
+              task?.personal?.name?.first !== undefined
+              ? task?.personal?.name?.first
               : null
           )
         }
@@ -169,7 +170,8 @@ function TaskCard({ task, deleteTask, updateTask, handleSelectPerson }: Props) {
         <Tooltip
           placement="right"
           title={`${
-            task?.personal?.name.first
+            typeof task?.personal === "object" &&
+            task?.personal?.name?.first !== undefined
               ? `${task?.personal?.name.first} ${task?.personal?.name.last}`
               : "Add Person"
           }`}
@@ -177,7 +179,11 @@ function TaskCard({ task, deleteTask, updateTask, handleSelectPerson }: Props) {
           <Avatar
             onClick={showModal}
             className="cursor-pointer border-slate-500"
-            src={task?.personal !== null && task?.personal?.picture.medium}
+            src={
+              typeof task?.personal === "object" &&
+              task?.personal?.name?.first !== undefined &&
+              task?.personal?.picture.medium
+            }
           />
         </Tooltip>
       </div>
