@@ -46,7 +46,8 @@ function KanbanBoard() {
   );
 
   useEffect(() => {
-    const selectedUserData = getLocalStorageData("selectedUserData");
+    const selectedUserData: DataType | null =
+      getLocalStorageData("selectedUserData");
     setSelectedUserData(selectedUserData);
   }, []);
 
@@ -68,7 +69,11 @@ function KanbanBoard() {
     setLocalStorageData("selectedUserData", null);
   }
 
-  function updateTask(id: Id, content: string, personal: DataType | null) {
+  function updateTask(
+    id: Id,
+    content: string,
+    personal: DataType | null | undefined
+  ) {
     const newTasks = tasks.map((task) => {
       if (task.id !== id) return task;
       return { ...task, content, personal };

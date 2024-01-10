@@ -13,7 +13,11 @@ const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender
 interface Props {
   task: Task;
   deleteTask: (id: Id) => void;
-  updateTask: (id: Id, content: string, personal: DataType | null) => void;
+  updateTask: (
+    id: Id,
+    content: string,
+    personal: DataType | null | undefined | string
+  ) => void;
   handleSelectPerson: (item: DataType, task: Task) => void;
 }
 
@@ -126,7 +130,13 @@ function TaskCard({ task, deleteTask, updateTask, handleSelectPerson }: Props) {
           }
         }}
         onChange={(e) =>
-          updateTask(task.id, e.target.value, task?.personal?.name.first)
+          updateTask(
+            task.id,
+            e.target.value,
+            task?.personal?.name.first !== undefined
+              ? task?.personal?.name.first
+              : null
+          )
         }
       ></textarea>
     </div>
