@@ -8,6 +8,8 @@
 
 This is a visual tool that empowers your project team in tracking all kinds of projects, workflows and tasks. Add files, to-do lists, and even automations: Customize them all to best suit the way your team works. You can add colons for all the processes you want, create tasks for these business processes and assign the tasks to the relevant person.
 
+Demo Link: https://trll-mx-team-kanban-progress-board.vercel.app/
+
 <!-- DESCRİPTİON -->
 
 ## Description
